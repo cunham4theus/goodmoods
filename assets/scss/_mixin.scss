@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+@mixin container-size {
+  max-width: 144rem;
+  margin-inline: auto;
+  padding-bottom: 6rem;
+}

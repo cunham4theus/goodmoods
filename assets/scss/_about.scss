@@ -1,0 +1,48 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+
+.home {
+  @include container-size;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 6rem;
+  margin-top: -12rem;  
+  @include container-size;
+  padding-inline: 14rem;
+  
+
+  &__description {
+    padding-top: 10rem;
+    display: grid;
+    gap: 3rem;   
+
+    h1 {
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 8rem;
+        height: .1rem;
+        left: -15.5rem;
+        top: 2rem;
+        position: absolute;
+        background-color: $color-terciary;
+      }
+    }
+
+    p {
+      max-width: 45ch;
+    }
+  }
+
+  &__image {    border: .4rem solid $color-primary;
+
+  }
+}

@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+.btn {
+  display: inline-block;
+  border: 1px solid $color-terciary;
+  padding: 1.5rem 6rem;
+  background-color: $color-secondary;
+  transition: all ease-in .06s;
+
+  &:hover {
+    transform: translateY(-.5rem);
+  }
+
+  &:focus {
+    transform: translateY(.5rem);
+    color: $color-terciary;
+    
+  }
+}

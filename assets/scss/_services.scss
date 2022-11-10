@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+.services {
+  display: grid;
+  gap: 6rem;
+  place-items: center;
+  @include container-size;
+  
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    padding: 3rem 0;    
+    border-top: 1px solid $color-terciary;
+    border-bottom: 1px solid $color-terciary;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+
+    
+
+    &__cards {
+      display: grid;
+      gap: 2rem;   
+      
+      a {
+        color: $color-terciary;
+      }
+    }
+  }
+
+ 
+}

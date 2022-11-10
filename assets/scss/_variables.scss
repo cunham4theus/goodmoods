@@ -1,0 +1,46 @@
+//Colors
+$color-primary: #F6F0F1;
+$color-secondary: #C39E9E;
+$color-terciary: #121111;
+
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+.color-terciary {
+  color: $color-terciary;
+}
+//Fonts
+
+//texto
+.defaut-font-primary {
+  font: 400 2.2rem/1 'Jacques Francois', serif;
+}
+.defaut-font-secondary {
+  font: 400 2.5rem/1 'Inria Serif', serif;
+}
+
+//button
+.defaut-font-terciary {
+  font: 400 2rem/1 'Inria Serif', serif;
+}
+
+//menus e cabeçalhos
+.menu-font-primary {
+  font: 400 2rem/1 'Jacques Francois', serif;
+  text-transform: uppercase;
+}
+.menu-font-secondary {
+  font: 500 2.8rem/1.5 'Inria Serif', serif;
+}
+
+//titulos
+.title-font-primary {
+  font: 400 4rem/1 'Jacques Francois', serif;
+  text-transform: uppercase;
+}
+.title-font-secondary {
+  font: 400 5rem/1 'Jacques Francois', serif;  
+}

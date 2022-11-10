@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  gap: 6rem;
+  @include container-size;
+  padding-bottom: 0;
+
+  &__nav {
+    display: flex;
+    gap: 4rem;
+
+    a {
+      position: relative;
+
+      &::after {
+        content: '';
+        background-color: $color-terciary;
+        width: 0;
+        height: .1rem;
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        left: 0;
+        transition: all ease-in 0.1s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
