@@ -35,6 +35,11 @@
       font-size: 1.6rem;
       padding-inline: .5rem;
       border-right: 1px solid $color-terciary;
+
+      @include respond(tab-port) {
+        padding-inline: 2rem;
+        border: none;
+      }
     }
 
   
@@ -48,13 +53,20 @@
     a {
       font-size: 1.6rem;
       padding-inline: .5rem;
+
+      @include respond(tab-port) {
+        padding-inline: 2rem;
+      }
     }
 
     a:not(:last-child) {
       border-right: 1px solid $color-terciary;
+
+      @include respond(tab-port) {
+        border: none;
+      }
     }
-    @include respond(tab-port) {
-    }
+   
   }
 
   &__nav {

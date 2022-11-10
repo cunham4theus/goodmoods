@@ -92,6 +92,12 @@ xxpx/16px = xxem       |
   padding-inline: 0.5rem;
   border-right: 1px solid #121111;
 }
+@media (min-width: 56.2rem) {
+  .header .nav--1 a {
+    padding-inline: 2rem;
+    border: none;
+  }
+}
 .header .nav--2 {
   order: 3;
 }
@@ -99,8 +105,18 @@ xxpx/16px = xxem       |
   font-size: 1.6rem;
   padding-inline: 0.5rem;
 }
+@media (min-width: 56.2rem) {
+  .header .nav--2 a {
+    padding-inline: 2rem;
+  }
+}
 .header .nav--2 a:not(:last-child) {
   border-right: 1px solid #121111;
+}
+@media (min-width: 56.2rem) {
+  .header .nav--2 a:not(:last-child) {
+    border: none;
+  }
 }
 .header__nav {
   display: block;
