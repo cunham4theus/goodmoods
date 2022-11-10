@@ -4,7 +4,7 @@
 .footer {
   margin-top: 4rem;
   padding: 4rem 0rem;
-  background-color: $color-secondary;
+  background-image: linear-gradient(to left bottom, $color-secondary, darken($color-secondary, 8%));
   display: grid;
   @include container-size;
   gap: 6rem;

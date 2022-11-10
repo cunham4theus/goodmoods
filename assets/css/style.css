@@ -81,6 +81,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -107,7 +108,7 @@ a {
   display: inline-block;
   border: 1px solid #121111;
   padding: 1.5rem 6rem;
-  background-color: #C39E9E;
+  background-image: linear-gradient(to left bottom, #C39E9E, #b07e7e);
   transition: all ease-in 0.06s;
 }
 .btn:hover {
@@ -235,7 +236,7 @@ a {
 .footer {
   margin-top: 4rem;
   padding: 4rem 0rem;
-  background-color: #C39E9E;
+  background-image: linear-gradient(to left bottom, #C39E9E, #b38585);
   display: grid;
   max-width: 144rem;
   margin-inline: auto;
@@ -351,6 +352,22 @@ a {
 }
 .footer__copy__newsletter .form button:focus {
   transform: scale(1);
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F6F0F1;
+  box-shadow: inset 1px 1px 4px rgba(195, 158, 158, 0.2);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#C39E9E, #b07e7e);
+  box-shadow: inset 0px 0px 3px rgba(18, 17, 17, 0.5);
+  border-radius: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
