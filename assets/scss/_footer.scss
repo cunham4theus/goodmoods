@@ -4,46 +4,70 @@
 .footer {
   margin-top: 4rem;
   padding: 4rem 0rem;
-  background-image: linear-gradient(to left bottom, $color-secondary, darken($color-secondary, 8%));
+  padding-inline: 1rem; 
+  background-image: linear-gradient(
+    to left bottom,
+    $color-secondary,
+    darken($color-secondary, 8%)
+  );
   display: grid;
   @include container-size;
   gap: 6rem;
-  padding-inline: 10rem;
-
+  @include respond(tab-port) {
+    padding-inline: 10rem;    
+  }
 
   &__contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     place-content: center;
-    height: 15vh;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+      height: 15vh;
+    }
 
     &-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-left: 2rem;
-      border-left: 1px solid $color-terciary;
-      gap: 1rem;
-      height: 15vh;
+      justify-content: center;      
+      border-bottom: 1px solid $color-terciary;
+      padding-bottom: 2rem;
+
+      @include respond(tab-port) {
+        border: none;
+        padding-left: 2rem;
+        border-left: 1px solid $color-terciary;
+        gap: 1rem;
+        height: 15vh;
+      }
     }
 
     &-address {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 2rem;
-      border-left: 1px solid $color-terciary;
       gap: 1rem;
-      height: 15vh;
       max-width: 60ch;
+
+      @include respond(tab-port) {
+        padding-left: 2rem;
+        border-left: 1px solid $color-terciary;
+        gap: 1rem;
+        height: 15vh;
+      }
     }
   }
 
   &__copy {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     place-content: center;
-    height: 15vh;
+    border-top: 1px solid $color-terciary;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+      height: 15vh;
+      border: none;
+    }
 
     &-copyright {
       display: flex;
@@ -53,8 +77,17 @@
       height: 15vh;
       max-width: 95ch;
 
+      @include respond(tab-port) {
+      }
+
       img {
+        max-width: 20rem;
+        margin: 0 auto;
         margin-bottom: 3rem;
+      }
+
+      h4 {
+        font-variant: bold;
       }
     }
 
@@ -66,20 +99,22 @@
       height: 15vh;
 
       h4 {
-        padding-bottom: 3rem;
-        padding-left: 2rem;
         position: relative;
+        @include respond(desktop) {
+          padding-bottom: 3rem;
+          padding-left: 2rem;
 
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          background-image: url('/assets/img/Arrowcurta.svg');
-          background-repeat: no-repeat;
-          width: 5rem;
-          height: 2rem;
-          top: 1.4rem;
-          left: -3rem;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url('/assets/img/Arrowcurta.svg');
+            background-repeat: no-repeat;
+            width: 5rem;
+            height: 2rem;
+            top: 1.4rem;
+            left: -3rem;
+          }
         }
       }
 
@@ -122,9 +157,9 @@
           position: absolute;
           cursor: pointer;
           right: 3rem;
-          top: .6rem;
-          transition: all ease .1s;
-          
+          top: 0.6rem;
+          transition: all ease 0.1s;
+
           &:hover {
             transform: scale(1.2);
           }

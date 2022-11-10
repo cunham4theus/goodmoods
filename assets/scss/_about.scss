@@ -8,18 +8,24 @@
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   place-items: center;
   gap: 6rem;
   margin-top: -12rem;  
   @include container-size;
-  padding-inline: 14rem;
+  
+  
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 14rem;
+  }
   
 
   &__description {
     padding-top: 10rem;
     display: grid;
-    gap: 3rem;   
+    gap: 3rem;
+    padding-inline: 1rem;   
 
     h1 {
       margin-bottom: 1rem;

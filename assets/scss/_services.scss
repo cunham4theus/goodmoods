@@ -17,15 +17,22 @@
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
     gap: 4rem;
+    padding: 1rem;
+
+    @include respond(tab-port) {
+      
+    }
 
     
 
     &__cards {
       display: grid;
       gap: 2rem;   
+      max-width: 40rem;
       
       a {
         color: $color-terciary;
