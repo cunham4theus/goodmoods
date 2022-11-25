@@ -30,6 +30,10 @@
     h1 {
       margin-bottom: 1rem;
       position: relative;
+      text-align: center;
+      @include respond(phone) {
+        text-align: left;
+      }
 
       &::before {
         content: '';
@@ -48,7 +52,12 @@
     }
   }
 
-  &__image {    border: .4rem solid $color-primary;
+  &__image {    
+    border: .4rem solid $color-primary;
+    display: none;
+    @include respond(phone) {
+      display: block;
+    }
 
   }
 }

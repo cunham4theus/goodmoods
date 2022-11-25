@@ -4,7 +4,7 @@
 .services {
   display: grid;
   gap: 6rem;
-  place-items: center;
+  place-items: center;  
   @include container-size;
   
 
@@ -21,18 +21,20 @@
     flex-wrap: wrap;
     justify-content: center;   
     gap: 4rem;
-    padding: 1rem;
-
-    @include respond(tab-port) {
-      
-    }
-
-    
+    padding: 1rem;   
 
     &__cards {
       display: grid;
       gap: 2rem;   
       max-width: 40rem;
+      box-shadow: 2px 2px 5px lighten($color-terciary, 60%);
+      place-items: center;
+      
+      @include respond(tab-port) {
+        place-items: initial;     
+        
+      }
+
       
       a {
         color: $color-terciary;
